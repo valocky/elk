@@ -1,0 +1,5 @@
+NGUSERNAME [0-9a-zA-Z\.\@\-\+_%:\/,]+
+NGUSER %{NGUSERNAME}
+SENTENCE [\s0-9a-zA-Z\.\@\-\+_%:\/]+
+SEN %{SENTENCE}
+DBNODEACCESS \[%{SEN:timestamp}\] %{NGUSER:auth}  %{NGUSER:clientip}:%{NUMBER:response} - requestID: %{NGUSER:ident} method: %{NGUSER:verb} http://dbnode%{NGUSER:request} \[%{NGUSER:mess}\]

@@ -113,9 +113,11 @@ ADD ./02-beats-input.conf /etc/logstash/conf.d/02-beats-input.conf
 ADD ./10-syslog.conf /etc/logstash/conf.d/10-syslog.conf
 ADD ./11-nginx.conf /etc/logstash/conf.d/11-nginx.conf
 ADD ./30-output.conf /etc/logstash/conf.d/30-output.conf
+ADD ./12-dbnode.conf /etc/logstash/conf.d/12-dbnode.conf
 
 # patterns
 ADD ./nginx.pattern ${LOGSTASH_HOME}/patterns/nginx
+ADD ./dbnode.pattern ${LOGSTASH_HOME}/patterns/dbnode
 RUN chown -R logstash:logstash ${LOGSTASH_HOME}/patterns
 
 
